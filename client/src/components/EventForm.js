@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import ModalDialog from "react-bootstrap/ModalDialog";
-import ModalHeader from "react-bootstrap/ModalHeader";
-import ModalTitle from "react-bootstrap/ModalTitle";
-import ModalFooter from "react-bootstrap/ModalFooter";
-import ModalBody from "react-bootstrap/ModalBody";
 import Form from "react-bootstrap/form";
 import Button from "react-bootstrap/Button";
 import { useMutation, useQuery } from "@apollo/client";
@@ -20,10 +15,8 @@ export default function FormModal(props) {
   const [event_time, setEvent_time] = useState("");
   // const [num_of_part, setNum_of_part] = useState("");
   const [participants, setParticipants] = useState([]);
-  const [participants1, setParticipants1] = useState("");
-  const [participants2, setParticipants2] = useState("");
-  const [participants3, setParticipants3] = useState("");
-  const [participants4, setParticipants4] = useState("");
+
+  const handleClose = () => setShow(false);
 
   const [addEvent, { error }] = useMutation(ADD_EVENT);
 
@@ -61,11 +54,11 @@ export default function FormModal(props) {
     setEvent_desc("");
     setEvent_date("");
     setEvent_time("");
-    setParticipants1("");
-    setParticipants2("");
-    setParticipants3("");
-    setParticipants4("");
+
     setParticipants([]);
+
+    handleClose();
+    document.location.reload(true);
   };
 
   const handleChange = (e) => {
@@ -83,19 +76,19 @@ export default function FormModal(props) {
   };
 
   const handleChangeP1 = (e) => {
-    const { name, value } = e.target;
+    const { value } = e.target;
     return setParticipants((participants) => participants.concat(value));
   };
   const handleChangeP2 = (e) => {
-    const { name, value } = e.target;
+    const { value } = e.target;
     return setParticipants((participants) => participants.concat(value));
   };
   const handleChangeP3 = (e) => {
-    const { name, value } = e.target;
+    const { value } = e.target;
     return setParticipants((participants) => participants.concat(value));
   };
   const handleChangeP4 = (e) => {
-    const { name, value } = e.target;
+    const { value } = e.target;
     return setParticipants((participants) => participants.concat(value));
   };
 
@@ -131,7 +124,6 @@ export default function FormModal(props) {
                   id="exampleFormControlSelect2"
                   name="participants1"
                   onChange={handleChangeP1}
-                  // value={participants1}
                 >
                   <option>Select a user:</option>
                   {users.map((user) => (

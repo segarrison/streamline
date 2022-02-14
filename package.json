@@ -1,5 +1,5 @@
 {
-  "name": "streamer-calendar",
+  "name": "streamline",
   "version": "1.0.0",
   "description": "A MERN app to enable streamers to schedule additional participants for their streams.",
   "main": "server.js",
@@ -13,17 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/segarrison/streamer-calendar.git"
+    "url": "git+https://github.com/segarrison/streamline.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/segarrison/streamer-calendar/issues"
+    "url": "https://github.com/segarrison/streamline/issues"
   },
-  "homepage": "https://github.com/segarrison/streamer-calendar#readme",
+  "homepage": "https://github.com/segarrison/streamline#readme",
   "devDependencies": {
-    "concurrently": "^6.4.0"
+    "concurrently": "^6.5.1"
   },
   "dependencies": {}
 }

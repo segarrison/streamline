@@ -39,6 +39,7 @@ const resolvers = {
     events: async () => {
       return await Event.find({}).populate("host").populate("participants");
     },
+
     //this doesn't work
     hostedByEvent: async (parent, { userId }) => {
       data = await Event.find({}).populate("host");
