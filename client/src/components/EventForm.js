@@ -72,24 +72,15 @@ export default function FormModal(props) {
         return setEvent_date(value);
       case "event_time":
         return setEvent_time(value);
+      case "participants1":
+        return setParticipants((participants) => participants.concat(value));
+      case "participants2":
+        return setParticipants((participants) => participants.concat(value));
+      case "participants3":
+         return setParticipants((participants) => participants.concat(value));
+      case "participants4":
+        return setParticipants((participants) => participants.concat(value));
     }
-  };
-
-  const handleChangeP1 = (e) => {
-    const { value } = e.target;
-    return setParticipants((participants) => participants.concat(value));
-  };
-  const handleChangeP2 = (e) => {
-    const { value } = e.target;
-    return setParticipants((participants) => participants.concat(value));
-  };
-  const handleChangeP3 = (e) => {
-    const { value } = e.target;
-    return setParticipants((participants) => participants.concat(value));
-  };
-  const handleChangeP4 = (e) => {
-    const { value } = e.target;
-    return setParticipants((participants) => participants.concat(value));
   };
 
   return (
@@ -123,7 +114,7 @@ export default function FormModal(props) {
                 <Form.Select
                   id="exampleFormControlSelect2"
                   name="participants1"
-                  onChange={handleChangeP1}
+                  onChange={handleChange}
                 >
                   <option>Select a user:</option>
                   {users.map((user) => (
@@ -136,7 +127,7 @@ export default function FormModal(props) {
                 <Form.Select
                   id="exampleFormControlSelect2"
                   name="participants2"
-                  onChange={handleChangeP2}
+                  onChange={handleChange}
                 >
                   <option>Select a user:</option>
                   {users.map((user) => (
@@ -149,7 +140,7 @@ export default function FormModal(props) {
                 <Form.Select
                   id="exampleFormControlSelect2"
                   name="participants3"
-                  onChange={handleChangeP3}
+                  onChange={handleChange}
                 >
                   <option>Select a user:</option>
                   {users.map((user) => (
@@ -162,7 +153,7 @@ export default function FormModal(props) {
                 <Form.Select
                   id="exampleFormControlSelect2"
                   name="participants4"
-                  onChange={handleChangeP4}
+                  onChange={handleChange}
                 >
                   <option>Select a user:</option>
                   {users.map((user) => (
