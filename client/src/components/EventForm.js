@@ -110,7 +110,7 @@ export default function FormModal(props) {
                 />
               </div>
               <div>
-                <label htmlFor="exampleFormControlSelect2">Participants</label>
+                <label htmlFor="exampleFormControlSelect2">Participant:</label>
                 <Form.Select
                   id="exampleFormControlSelect2"
                   name="participants1"
@@ -123,7 +123,7 @@ export default function FormModal(props) {
                 </Form.Select>
               </div>
               <div>
-                <label htmlFor="exampleFormControlSelect2">Participants</label>
+                <label htmlFor="exampleFormControlSelect2">Participant:</label>
                 <Form.Select
                   id="exampleFormControlSelect2"
                   name="participants2"
@@ -136,7 +136,7 @@ export default function FormModal(props) {
                 </Form.Select>
               </div>
               <div>
-                <label htmlFor="exampleFormControlSelect2">Participants</label>
+                <label htmlFor="exampleFormControlSelect2">Participant:</label>
                 <Form.Select
                   id="exampleFormControlSelect2"
                   name="participants3"
@@ -149,7 +149,7 @@ export default function FormModal(props) {
                 </Form.Select>
               </div>
               <div>
-                <label htmlFor="exampleFormControlSelect2">Participants</label>
+                <label htmlFor="exampleFormControlSelect2">Participant:</label>
                 <Form.Select
                   id="exampleFormControlSelect2"
                   name="participants4"

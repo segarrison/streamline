@@ -35,7 +35,7 @@ const resolvers = {
         .populate({ path: "part_events", populate: "host" });
     },
 
-    // finds eveents and what is connected to them
+    // finds events and what is connected to them
     events: async () => {
       return await Event.find({}).populate("host").populate("participants");
     },
